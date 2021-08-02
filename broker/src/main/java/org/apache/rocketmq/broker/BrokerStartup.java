@@ -152,6 +152,7 @@ public class BrokerStartup {
                 try {
                     String[] addrArray = namesrvAddr.split(";");
                     for (String addr : addrArray) {
+
                         RemotingUtil.string2SocketAddress(addr);
                     }
                 } catch (Exception e) {

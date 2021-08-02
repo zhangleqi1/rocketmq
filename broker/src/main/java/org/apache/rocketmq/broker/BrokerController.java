@@ -881,6 +881,7 @@ public class BrokerController {
             this.filterServerManager.start();
         }
 
+        //连接nameserver
         if (!messageStoreConfig.isEnableDLegerCommitLog()) {
             startProcessorByHa(messageStoreConfig.getBrokerRole());
             handleSlaveSynchronize(messageStoreConfig.getBrokerRole());

@@ -152,6 +152,7 @@ public class RemotingUtil {
         int split = addr.lastIndexOf(":");
         String host = addr.substring(0, split);
         String port = addr.substring(split + 1);
+        //感觉就是为了检查一下是否合法
         InetSocketAddress isa = new InetSocketAddress(host, Integer.parseInt(port));
         return isa;
     }
